@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(playwright install:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(timeout:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "/Users/harveygunjarueg/Downloads"
+    ]
+  }
+}
