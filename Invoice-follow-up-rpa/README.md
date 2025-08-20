@@ -1,79 +1,63 @@
-# TIMS Invoice Export Automation
+# Invoice Follow-up RPA
 
 ## 🎯 Overview
 
-Automated system for exporting invoice data from TIMS (Lotus) system with SharePoint integration.
+Automated RPA system for exporting data from TIMS (Lotus) system and Power BI with file management capabilities.
 
 ## 📁 Project Structure
 
 ```
 Invoice-follow-up-rpa/
-├── tims_final.py                     # Main automation script
-├── manual_sharepoint_helper.py       # Manual upload preparation
-├── quick_sharepoint_test.py          # SharePoint permission testing
-├── sharepoint_permissions_guide.md  # IT admin setup guide
-├── FINAL_SOLUTION_STATUS.md          # Complete documentation
-├── downloads/                        # TIMS export files
-└── sharepoint_ready/                 # Manual upload ready files
+├── tims_final.py                     # TIMS automation script
+├── PBI_export.py                     # Power BI export automation
+├── FINAL_SOLUTION_STATUS.md          # Project documentation
+├── README.md                         # This file
+└── downloads/                        # Downloaded export files
 ```
 
 ## 🚀 Quick Start
 
-### Daily Usage
+### TIMS Export
 ```bash
 python tims_final.py
 ```
 
-### Manual SharePoint Upload
+### Power BI Export
 ```bash
-python manual_sharepoint_helper.py
-```
-
-### Test SharePoint Permissions
-```bash
-python quick_sharepoint_test.py
+python PBI_export.py
 ```
 
 ## ✅ Features
 
-- **Automated TIMS Login**: Handles authentication automatically
+### TIMS Automation
+- **Automated Login**: Handles TIMS authentication automatically
 - **Smart Date Processing**: Always exports yesterday's data (Bangkok timezone)
 - **Robust Export Process**: Network interception ensures reliable downloads
 - **File Management**: Automatic ZIP extraction and proper naming
-- **SharePoint Integration**: Automatic upload (when permissions configured)
-- **Manual Fallback**: Prepares files for manual upload when needed
 - **Error Handling**: Comprehensive retry and recovery mechanisms
+
+### Power BI Automation
+- **Automated Export**: Extracts data from Power BI reports
+- **File Processing**: Handles download and organization
+- **Data Management**: Organizes exported files systematically
 
 ## 📊 Current Status
 
 ### ✅ Working Features
-- TIMS export automation: **100% functional**
-- File download and extraction: **100% reliable**
-- Local file organization: **Automatic**
-- Manual upload preparation: **Automatic**
+- **TIMS export automation**: Fully functional
+- **Power BI export automation**: Ready for use
+- **File download and extraction**: Reliable operation
+- **Local file organization**: Automatic
 
-### ⚠️ Pending Setup
-- SharePoint permissions: **Requires IT admin configuration**
+## 📋 Requirements
 
-## 🔧 SharePoint Setup
-
-For automatic SharePoint upload, IT admin must configure Azure app permissions:
-
-1. **Azure Portal** → **App registrations** → **"Trade Invoice Notification project 01-08-2025"**
-2. **Add permissions**: `Sites.ReadWrite.All`, `Files.ReadWrite.All`
-3. **Grant admin consent**
-
-See `sharepoint_permissions_guide.md` for detailed instructions.
-
-## 📋 Support
-
-- **Documentation**: `FINAL_SOLUTION_STATUS.md`
-- **Permissions**: `sharepoint_permissions_guide.md`
-- **Test tool**: `quick_sharepoint_test.py`
+- Python 3.x
+- Playwright
+- Required Python packages (install with requirements.txt if available)
 
 ## 🎉 Success Metrics
 
-- **Time savings**: 15+ minutes → 2 minutes daily
-- **Error reduction**: 100% elimination of manual date errors
-- **Process reliability**: 100% consistent automation
-- **File organization**: Automatic TIMS naming convention
+- **Time savings**: Automated daily export processes
+- **Error reduction**: Elimination of manual export errors
+- **Process reliability**: Consistent automation workflow
+- **File organization**: Systematic file naming and storage
